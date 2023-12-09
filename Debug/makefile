@@ -11,7 +11,7 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./Dio.obj" \
-"./Dio_PBcfg.obj" \
+"./Dio_Cfg.obj" \
 "./main.obj" \
 "./tm4c123gh6pm_startup_ccs.obj" \
 "../tm4c123gh6pm.cmd" \
@@ -144,8 +144,8 @@ Autosar.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Dio.obj" "Dio_PBcfg.obj" "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
-	-$(RM) "Dio.d" "Dio_PBcfg.d" "main.d" "tm4c123gh6pm_startup_ccs.d" 
+	-$(RM) "Dio.obj" "Dio_Cfg.obj" "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
+	-$(RM) "Dio.d" "Dio_Cfg.d" "main.d" "tm4c123gh6pm_startup_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

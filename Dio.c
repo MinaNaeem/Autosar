@@ -1,7 +1,5 @@
 #include "Dio.h"
 
-static const Dio_ConfigChannel * Dio_PortChannels = NULL_PTR;
-
 void Dio_WriteChannel(Dio_ChannelType ChannelId, Dio_LevelType Level)
 {
 	volatile uint32 * Port_Ptr = NULL_PTR;
@@ -53,7 +51,6 @@ Dio_LevelType Dio_ReadChannel(Dio_ChannelType ChannelId)
 		    case 5:    Port_Ptr = &GPIO_PORTF_DATA_R;
 		               break;
 		}
-		/* Read the required channel */
 		if(BIT_IS_SET(*Port_Ptr,Dio_PortChannels[ChannelId].Ch_Num))
 		{
 			output = STD_HIGH;
@@ -65,4 +62,6 @@ Dio_LevelType Dio_ReadChannel(Dio_ChannelType ChannelId)
 
         return output;
 }
+
+
 

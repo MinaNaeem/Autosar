@@ -3,7 +3,7 @@
 
 
 
-#define DIO_CONFIGURED_CHANNLES              (2U)
+#define NUM_OF_CONFIGURED_CHANNELS              (2U)
 
 
 #define DioConf_LED1_CHANNEL_ID_INDEX        (uint8)0x00
